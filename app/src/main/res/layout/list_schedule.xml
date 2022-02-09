@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/listTextViewDate"
+        android:layout_width="201dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="181dp"
+        android:text="2022年2月1日(火)"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listTextViewTitle" />
+
+    <TextView
+        android:id="@+id/listTextViewTitle"
+        android:layout_width="293dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="59dp"
+        android:text="予定一覧"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/listRegistrationScheduleButton"
+        android:layout_width="230dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="予定を登録する"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="624dp" />
+
+    <ScrollView
+        android:id="@+id/listScrollView"
+        android:layout_width="362dp"
+        android:layout_height="446dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/debug_border"
+        app:layout_constraintBottom_toTopOf="@+id/listRegistrationScheduleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listTextViewDate"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
