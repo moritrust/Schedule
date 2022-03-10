@@ -6,23 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/registrationEditTextTime2"
-        android:layout_width="257dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="time"
-        android:text="00:00"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="341dp" />
-
     <TextView
         android:id="@+id/registrationTextViewDate"
         android:layout_width="201dp"
         android:layout_height="37dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="181dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="140dp"
         android:text="2022年2月1日(火)"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,11 +24,13 @@
         android:layout_marginStart="59dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="59dp"
+        android:layout_marginBottom="52dp"
         android:text="予定登録画面"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/registrationTextViewDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -48,63 +39,104 @@
         android:id="@+id/registrationScheduleButton"
         android:layout_width="230dp"
         android:layout_height="62dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="63dp"
         android:backgroundTint="@android:color/holo_red_dark"
         android:text="登録"
         android:textAlignment="center"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="624dp" />
-
-    <EditText
-        android:id="@+id/registrationEditText"
-        android:layout_width="257dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="タイトル"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="167dp" />
-
-    <TextView
-        android:id="@+id/registrationTextView"
-        android:layout_width="74dp"
-        android:layout_height="48dp"
-        android:text="予定名"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="167dp"
-        android:gravity="center"/>
-
-    <TextView
-        android:id="@+id/registrationTextView2"
-        android:layout_width="74dp"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:text="開始"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="254dp" />
-
-    <TextView
-        android:id="@+id/registrationTextView3"
-        android:layout_width="74dp"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:text="終了"
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="341dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrationTextView3" />
 
     <EditText
         android:id="@+id/registrationEditTextTime"
         android:layout_width="257dp"
         android:layout_height="48dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="13dp"
         android:ems="10"
         android:inputType="time"
         android:text="00:00"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="254dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrationEditText" />
+
+    <TextView
+        android:id="@+id/registrationTextView3"
+        android:layout_width="74dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="終了"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/registrationEditTextTime2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrationTextView2" />
+
+    <EditText
+        android:id="@+id/registrationEditTextTime2"
+        android:layout_width="257dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="126dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="00:00"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/registrationScheduleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/registrationTextView3"
+        app:layout_constraintTop_toBottomOf="@+id/registrationEditTextTime"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/registrationTextView"
+        android:layout_width="74dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="13dp"
+        android:gravity="center"
+        android:text="予定名"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/registrationEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrationTextViewDate" />
+
+    <EditText
+        android:id="@+id/registrationEditText"
+        android:layout_width="245dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="64dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="タイトル"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/registrationEditTextTime"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/registrationTextView2"
+        android:layout_width="74dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="39dp"
+        android:gravity="center"
+        android:text="開始"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/registrationTextView3"
+        app:layout_constraintEnd_toStartOf="@+id/registrationEditTextTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrationTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

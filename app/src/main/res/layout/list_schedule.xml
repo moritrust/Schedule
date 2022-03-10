@@ -8,10 +8,10 @@
 
     <TextView
         android:id="@+id/listTextViewDate"
-        android:layout_width="201dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="181dp"
+        android:layout_width="13dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="72dp"
         android:text="2022年2月1日(火)"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,34 +35,46 @@
 
     <Button
         android:id="@+id/listRegistrationScheduleButton"
-        android:layout_width="230dp"
-        android:layout_height="62dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="45dp"
         android:backgroundTint="@android:color/holo_red_dark"
         android:text="予定を登録する"
         android:textAlignment="center"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="624dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listScrollView" />
 
     <ScrollView
         android:id="@+id/listScrollView"
-        android:layout_width="362dp"
-        android:layout_height="446dp"
+        android:layout_width="244dp"
+        android:layout_height="241dp"
         android:layout_marginStart="29dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="38dp"
         android:background="@drawable/debug_border"
         app:layout_constraintBottom_toTopOf="@+id/listRegistrationScheduleButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listTextViewDate"
-        app:layout_constraintVertical_bias="0.0">
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck">
+        <!-- スクロールさせたいTextView -->
         <LinearLayout
+            android:id="@+id/LinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:text="予定無し"
+            android:textSize="12sp"
+            android:gravity="left"/>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
